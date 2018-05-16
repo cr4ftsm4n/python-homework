@@ -7,8 +7,6 @@ python: 3.6
 
 script:
   - ./check-target reverse-string
-  - ./check-target isogram
-  - ./check-target pangram
 
 
 # env:

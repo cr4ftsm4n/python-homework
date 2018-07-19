@@ -10,6 +10,7 @@ script:
   - ./check-target.py flatten-array roman-numerals space-age grains luhn
   - ./check-target.py etl prime-factors pig-latin simple-cipher scrabble-score
   - ./check-target.py crypto-square sublist pythagorean-triplet circular-buffer robot-name
+  - ./check-target.py matrix rail-fence-cipher nth-prime saddle-points beer-song
 
 notifications:
   email: false

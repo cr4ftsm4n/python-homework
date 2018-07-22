@@ -1,23 +1,36 @@
 class BufferFullException(Exception):
-    pass
+    def __init__(self):
+        Exception.__init__(self,r".+")
 
 
 class BufferEmptyException(Exception):
-    pass
+    def __init__(self):
+        Exception.__init__(self,r".+")
 
 
 class CircularBuffer(object):
+    data = []
+    capacity = 0
     def __init__(self, capacity):
-        pass
+        self.data = []
+        self.capacity = capacity
 
     def read(self):
-        pass
+        if len(self.data) <= 0:
+            raise BufferEmptyException
+        date = self.data[0]
+        self.data.pop(0)
+        return date
 
     def write(self, data):
-        pass
+        if len(self.data) >= self.capacity:
+            raise BufferFullException
+        self.data.append(data)
 
     def overwrite(self, data):
-        pass
+        if len(self.data) == self.capacity:
+            self.data.pop(0)
+        self.data.append(data)
 
     def clear(self):
-        pass
+        self.data = []

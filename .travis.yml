@@ -11,6 +11,7 @@ script:
   - ./check-target.py etl prime-factors pig-latin simple-cipher scrabble-score
   - ./check-target.py crypto-square sublist pythagorean-triplet circular-buffer robot-name
   - ./check-target.py matrix rail-fence-cipher nth-prime saddle-points beer-song
+  - ./check-target.py perfect-numbers secret-handshake twelve-days palindrome-products bracket-push
 
 notifications:
   email: false
